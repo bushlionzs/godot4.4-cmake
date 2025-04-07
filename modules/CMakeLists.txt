@@ -246,7 +246,7 @@ foreach(file ${MODULES_SOURCE})
     source_group("${vs_filter}" FILES "${file}")
 endforeach()
 
-godot_add_library(godot-modules modules STATIC ${MODULES_SOURCE})
+add_library(godot-modules STATIC ${MODULES_SOURCE})
 
 target_include_directories(godot-modules PUBLIC 
 ${GODOT_ENGINE_ROOT_DIRECTORY} 

@@ -51,7 +51,7 @@ foreach(file ${GODOT_CORE_SOURCE})
     source_group("${vs_filter}" FILES "${file}")
 endforeach()
 
-godot_add_library(godot-core core STATIC ${GODOT_CORE_SOURCE})
+add_library(godot-core STATIC ${GODOT_CORE_SOURCE})
 
 target_include_directories(godot-core PUBLIC 
 ${GODOT_ENGINE_ROOT_DIRECTORY} 

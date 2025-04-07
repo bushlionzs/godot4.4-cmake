@@ -64,7 +64,7 @@ set(PLATFORM_WINDOWS_RUN_SVG_OUTPUT ${CMAKE_BINARY_INCLUDE_DIR}/platform/windows
 GENERATE_PLATFORM_LOGOS_AND_RUN_ICON(windows run_icon ${PLATFORM_WINDOWS_RUN_SVG_SOURCE} ${PLATFORM_WINDOWS_RUN_SVG_OUTPUT})
 
 #Find the package to link and enable/disable
-godot_add_library(platforms platform STATIC ${PLATFORM_SOURCE} ${PLATFORM_WINDOWS_LOGO_SVG_OUTPUT} ${PLATFORM_WINDOWS_RUN_SVG_OUTPUT})
+add_library(platforms STATIC ${PLATFORM_SOURCE} ${PLATFORM_WINDOWS_LOGO_SVG_OUTPUT} ${PLATFORM_WINDOWS_RUN_SVG_OUTPUT})
 target_include_directories(platforms PRIVATE
                                              ${GODOT_ENGINE_ROOT_DIRECTORY}
                                              ${DBUS_INCLUDE_DIRS})

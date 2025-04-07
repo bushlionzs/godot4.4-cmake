@@ -45,7 +45,7 @@ list(APPEND EDITOR_SOURCE ${PLUGINS_EDITOR_SOURCE})
 list(APPEND EDITOR_SOURCE ${PROJECT_MANAGER_EDITOR_SOURCE})
 list(APPEND EDITOR_SOURCE ${THEMES_EDITOR_SOURCE})
 
-godot_add_library(godot-editor editor STATIC ${EDITOR_SOURCE})
+add_library(godot-editor STATIC ${EDITOR_SOURCE})
 
 target_include_directories(godot-editor PUBLIC 
 ${GODOT_ENGINE_ROOT_DIRECTORY} 

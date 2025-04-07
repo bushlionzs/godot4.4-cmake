@@ -66,7 +66,7 @@ foreach(file ${GODOT_SERVER_SOURCE})
     source_group("${vs_filter}" FILES "${file}")
 endforeach()
 
-godot_add_library(godot-server servers STATIC ${GODOT_SERVER_SOURCE})
+add_library(godot-server STATIC ${GODOT_SERVER_SOURCE})
 target_include_directories(godot-server PUBLIC 
 ${GODOT_ENGINE_ROOT_DIRECTORY} 
 ${GODOT_SOURCE_ROOT_PLATFORM_DIR}/windows
