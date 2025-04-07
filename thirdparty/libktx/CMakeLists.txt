@@ -3,6 +3,7 @@
 #to the target as modern cmake code affords us
 cmake_minimum_required(VERSION 3.16 FATAL_ERROR)
 add_definitions(-DKHRONOS_STATIC)
+add_definitions(-DMINIZ_HEADER_FILE_ONLY)
 set(LIBKTX_SOURCE_DIR ${GODOT_SOURCE_ROOT_THIRDPARTY_DIR}/libktx)
 
 file(GLOB  LIBKTX_MODULES_SOURCE 

@@ -5,7 +5,7 @@ cmake_minimum_required(VERSION 3.16 FATAL_ERROR)
 
 add_definitions(-DTOOLS_ENABLED)
 add_definitions(-DDEBUG_ENABLED)
-
+#add_definitions(-DSTEAMAPI_ENABLED)
 set(GODOT_MAIN_BASE_DIR ${GODOT_ENGINE_ROOT_DIRECTORY}/main)
 
 #####################################
@@ -18,6 +18,7 @@ set(MAIN_EXECUTABLE_SOURCE
 	${GODOT_MAIN_BASE_DIR}/main.cpp
 	${GODOT_MAIN_BASE_DIR}/main_timer_sync.cpp
 	${GODOT_MAIN_BASE_DIR}/performance.cpp
+	${GODOT_MAIN_BASE_DIR}/steam_tracker.cpp
 	)
 
 set(GODOT_PLATFORM_GENERATED_REGISTERED_APIS_OUTPUT ${GODOT_ENGINE_ROOT_DIRECTORY}/platform/register_platform_apis.gen.cpp)

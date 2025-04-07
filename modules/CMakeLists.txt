@@ -8,6 +8,11 @@ add_definitions(-DGODOT_MODULE)
 add_definitions(-DCLIPPER2_ENABLED)
 add_definitions(-DKHRONOS_STATIC)
 add_definitions(-DPCRE2_STATIC)
+add_definitions(-DTVG_STATIC)
+add_definitions(-DU_STATIC_IMPLEMENTATION)
+add_definitions(-DU_HAVE_LIB_SUFFIX=1)
+add_definitions(-DU_LIB_SUFFIX_C_NAME=_godot)
+add_definitions(-DICU_STATIC_DATA)
 
 set(GODOT_SOURCE_MODULES_DIR ${GODOT_ENGINE_ROOT_DIRECTORY}/modules)
 

@@ -53,7 +53,7 @@ add_subdirectory(etcpak)
 ####################################
 #freetype
 ####################################
-add_subdirectory(freetype-2.12.0)
+add_subdirectory(freetype)
 
 ####################################
 #glad

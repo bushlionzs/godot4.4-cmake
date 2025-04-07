@@ -2,7 +2,6 @@
 #by default. We want to be sure to have the ability to attach as many things
 #to the target as modern cmake code affords us
 cmake_minimum_required(VERSION 3.16 FATAL_ERROR)
-add_definitions(-DDEBUG_ENABLED)
 set(GODOT_SOURCE_ROOT_EDITOR_DIR ${GODOT_ENGINE_ROOT_DIRECTORY}/editor)
 
 add_definitions(-DTOOLS_ENABLED)

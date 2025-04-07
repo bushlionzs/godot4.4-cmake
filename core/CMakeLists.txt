@@ -9,6 +9,7 @@ set(GODOT_SOURCE_ROOT_THIRDPARTY_DIR ${GODOT_ENGINE_ROOT_DIRECTORY}/thirdparty)
 
 add_definitions(-DTOOLS_ENABLED)
 add_definitions(-DDEBUG_ENABLED)
+add_definitions(-DCLIPPER2_ENABLED)
 
 
 

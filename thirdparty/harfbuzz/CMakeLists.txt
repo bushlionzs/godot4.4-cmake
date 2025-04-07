@@ -4,6 +4,11 @@
 cmake_minimum_required(VERSION 3.16 FATAL_ERROR)
 add_definitions(-DHAVE_FREETYPE)
 add_definitions(-DHAVE_ICU)
+add_definitions(-DU_STATIC_IMPLEMENTATION)
+add_definitions(-DU_HAVE_LIB_SUFFIX=1)
+add_definitions(-DU_LIB_SUFFIX_C_NAME=_godot)
+add_definitions(-DHAVE_ICU_BUILTIN)
+
 set(HARFBUZZ_SOURCE_DIR ${GODOT_SOURCE_ROOT_THIRDPARTY_DIR}/harfbuzz)
 
 file(GLOB  HARFBUZZ_MODULES_SOURCE 

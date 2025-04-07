@@ -4,6 +4,12 @@
 cmake_minimum_required(VERSION 3.16 FATAL_ERROR)
 
 add_definitions(-DVULKAN_ENABLED)
+add_definitions(-DTOOLS_ENABLED)
+add_definitions(-DDEBUG_ENABLED)
+add_definitions(-DUSE_VOLK)
+add_definitions(-DVK_USE_PLATFORM_WIN32_KHR)
+add_definitions(-DVMA_STATIC_VULKAN_FUNCTIONS=1)
+
 
 set(GODOT_DRIVERS_BASE_DIR ${GODOT_ENGINE_ROOT_DIRECTORY}/drivers)
 
@@ -34,11 +40,15 @@ godot_add_library(godot-driver drivers STATIC ${GODOT_DRIVERS_SOURCE})
 target_include_directories(godot-driver PUBLIC 
 ${GODOT_ENGINE_ROOT_DIRECTORY} 
 ${GODOT_SOURCE_ROOT_PLATFORM_DIR}/windows
-${GODOT_SOURCE_ROOT_THIRDPARTY_DIR}/clipper2/include
-${GODOT_SOURCE_ROOT_THIRDPARTY_DIR}/mbedtls/include
-${GODOT_SOURCE_ROOT_THIRDPARTY_DIR}/zlib
-${GODOT_SOURCE_ROOT_THIRDPARTY_DIR}/zstd
 ${GODOT_SOURCE_ROOT_THIRDPARTY_DIR}/vulkan/include
 ${GODOT_SOURCE_ROOT_THIRDPARTY_DIR}/vulkan
-${GODOT_SOURCE_ROOT_THIRDPARTY_DIR}/libpng
+)
+
+target_link_libraries(godot-driver PUBLIC
+clipper2
+mbedtls
+zlib
+zstd
+libpng
+volk
 )

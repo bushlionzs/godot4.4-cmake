@@ -1,7 +1,8 @@
-add_definitions(-DTOOLS_ENABLED)
 set(PLATFORM_SOURCE_DIR ${GODOT_ENGINE_ROOT_DIRECTORY}/platform)
 add_definitions(-DTOOLS_ENABLED)
 add_definitions(-DDEBUG_ENABLED)
+add_definitions(-DVULKAN_ENABLED)
+add_definitions(-DRD_ENABLED)
 file(GLOB  PLATFORM_SOURCE "${PLATFORM_SOURCE_DIR}/*.cpp" "${PLATFORM_SOURCE_DIR}/*.h")
 file(GLOB  PLATFORM_WINDOWS_SOURCE
     "${PLATFORM_SOURCE_DIR}/windows/*.cpp" 
@@ -45,7 +46,7 @@ list(APPEND PLATFORM_SOURCE ${PLATFORM_WEB_SOURCE})
 list(APPEND PLATFORM_SOURCE ${PLATFORM_LINUXBSD_SOURCE})
 
 
-list(APPEND PLATFORM_SOURCE "${PLATFORM_SOURCE_DIR}/windows/crash_handler_windows_signal.cpp" )
+list(REMOVE_ITEM  PLATFORM_SOURCE "${PLATFORM_SOURCE_DIR}/windows/crash_handler_windows_signal.cpp" )
 
 foreach(file ${PLATFORM_SOURCE})
     file(RELATIVE_PATH relative_path "${CMAKE_CURRENT_SOURCE_DIR}" "${file}")
